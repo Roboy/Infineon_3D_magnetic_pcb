@@ -60,7 +60,7 @@ U 1 1 59558582
 P 4600 2400
 F 0 "J1" H 4600 2670 50  0000 C CNN
 F 1 "VDD" H 4600 2600 50  0000 C CNN
-F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 4800 2400 50  0001 C CNN
+F 2 "Wire_Pads:SolderWirePad_single_0-8mmDrill" H 4800 2400 50  0001 C CNN
 F 3 "" H 4800 2400 50  0001 C CNN
 	1    4600 2400
 	1    0    0    -1  
@@ -71,7 +71,7 @@ U 1 1 59558603
 P 4850 2400
 F 0 "J2" H 4850 2670 50  0000 C CNN
 F 1 "SCL" H 4850 2600 50  0000 C CNN
-F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 5050 2400 50  0001 C CNN
+F 2 "Wire_Pads:SolderWirePad_single_0-8mmDrill" H 5050 2400 50  0001 C CNN
 F 3 "" H 5050 2400 50  0001 C CNN
 	1    4850 2400
 	1    0    0    -1  
@@ -82,7 +82,7 @@ U 1 1 59558626
 P 5100 2400
 F 0 "J3" H 5100 2670 50  0000 C CNN
 F 1 "GND" H 5100 2600 50  0000 C CNN
-F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 5300 2400 50  0001 C CNN
+F 2 "Wire_Pads:SolderWirePad_single_0-8mmDrill" H 5300 2400 50  0001 C CNN
 F 3 "" H 5300 2400 50  0001 C CNN
 	1    5100 2400
 	1    0    0    -1  
@@ -93,7 +93,7 @@ U 1 1 59558648
 P 5300 2400
 F 0 "J4" H 5300 2670 50  0000 C CNN
 F 1 "SDA" H 5300 2600 50  0000 C CNN
-F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 5500 2400 50  0001 C CNN
+F 2 "Wire_Pads:SolderWirePad_single_0-8mmDrill" H 5500 2400 50  0001 C CNN
 F 3 "" H 5500 2400 50  0001 C CNN
 	1    5300 2400
 	1    0    0    -1  
@@ -147,7 +147,7 @@ Wire Wire Line
 Wire Wire Line
 	4400 2400 4400 2550
 Wire Wire Line
-	4400 2550 5750 2550
+	4350 2550 5750 2550
 Wire Wire Line
 	5750 2550 5750 3200
 Wire Wire Line
@@ -164,13 +164,29 @@ Wire Wire Line
 Wire Wire Line
 	4750 2850 4750 3000
 Wire Wire Line
-	5900 2700 5900 3500
+	5900 3500 5900 2700
 Wire Wire Line
 	5900 2700 5250 2700
 Wire Wire Line
 	5250 2700 5250 2800
 Wire Wire Line
-	5900 3500 5250 3500
+	4350 3500 5900 3500
 Connection ~ 5250 3500
 Connection ~ 5900 3000
+$Comp
+L C C1
+U 1 1 5973D244
+P 4350 2900
+F 0 "C1" H 4375 3000 50  0000 L CNN
+F 1 "C" H 4375 2800 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 4388 2750 50  0001 C CNN
+F 3 "" H 4350 2900 50  0001 C CNN
+	1    4350 2900
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4350 2750 4350 2550
+Connection ~ 4400 2550
+Wire Wire Line
+	4350 3050 4350 3500
 $EndSCHEMATC

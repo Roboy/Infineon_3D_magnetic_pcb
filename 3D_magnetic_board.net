@@ -1,8 +1,8 @@
 (export (version D)
   (design
-    (source /home/roboy/workspace/3D_magnetic_board/3D_magnetic_board.sch)
-    (date "So 23 Jul 2017 00:31:36 CEST")
-    (tool "Eeschema 4.0.6-e0-6349~53~ubuntu16.04.1")
+    (source /home/luis/workspace/Infineon_3D_magnetic_pcb/3D_magnetic_board.sch)
+    (date "dom 30 jul 2017 23:21:06 CEST")
+    (tool "Eeschema 4.0.4+e1-6308~48~ubuntu15.10.1-stable")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
         (title)
@@ -17,8 +17,8 @@
   (components
     (comp (ref U1)
       (value AT42QT1010-TSHR)
-      (footprint TO_SOT_Packages_SMD:TSOT-23-6_MK06A)
-      (libsource (lib atmel) (part AT42QT1010-TSHR))
+      (footprint custom_lib:TSOP-6)
+      (libsource (lib 3D_magnetic_board-cache) (part AT42QT1010-TSHR))
       (sheetpath (names /) (tstamps /))
       (tstamp 59558503))
     (comp (ref J1)
@@ -52,11 +52,9 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 5973D244)))
   (libparts
-    (libpart (lib atmel) (part AT42QT1010-TSHR)
+    (libpart (lib 3D_magnetic_board-cache) (part AT42QT1010-TSHR)
       (aliases
         (alias AT42QT1011-TSHR))
-      (description "Single-key Touch Sensor, SOT-23-6")
-      (docs http://www.atmel.com/Images/Atmel-9541-AT42-QTouch-BSW-AT42QT1010_Datasheet.pdf)
       (footprints
         (fp SOT-23*))
       (fields
@@ -73,7 +71,11 @@
     (libpart (lib device) (part C)
       (description "Unpolarized capacitor")
       (footprints
-        (fp C_*))
+        (fp C?)
+        (fp C_????_*)
+        (fp C_????)
+        (fp SMD*_c)
+        (fp Capacitor*))
       (fields
         (field (name Reference) C)
         (field (name Value) C))
@@ -83,7 +85,7 @@
     (libpart (lib conn) (part TEST_1P)
       (description point)
       (fields
-        (field (name Reference) J)
+        (field (name Reference) W)
         (field (name Value) TEST_1P))
       (pins
         (pin (num 1) (name 1) (type passive)))))
@@ -92,8 +94,8 @@
       (uri /usr/share/kicad/library/device.lib))
     (library (logical conn)
       (uri /usr/share/kicad/library/conn.lib))
-    (library (logical atmel)
-      (uri /usr/share/kicad/library/atmel.lib)))
+    (library (logical 3D_magnetic_board-cache)
+      (uri /home/luis/workspace/Infineon_3D_magnetic_pcb/3D_magnetic_board-cache.lib)))
   (nets
     (net (code 1) (name "Net-(J4-Pad1)")
       (node (ref J4) (pin 1))
