@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name 3D_magnetic_board-rescue)(type Legacy)(uri ${KIPRJMOD}/3D_magnetic_board-rescue.lib)(options "")(descr ""))
+)
